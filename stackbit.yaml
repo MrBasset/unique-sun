@@ -2,3 +2,32 @@ stackbitVersion: ~0.3.0
 ssgName: gatsby
 nodeVersion: '12'
 publishDir: public
+pagesDir: src/pages
+assets:
+  referenceType: static
+  staticDir: static
+  publicPath: /
+models:
+  page:
+    type: page
+    label: Index
+    hideContent: true
+    layout: index
+    file: index.md
+    singleInstance: true
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page
+        required: true
+      - type: image
+        name: hero
+        label: Image
+        description: The image displayed on the page
+        required: true
+      - type: string
+        name: template
+        const: index
+        hidden: true
+        required: true

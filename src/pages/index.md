@@ -1,5 +1,5 @@
 ---
 title: Home
-hero: /images/demo.png
+hero: images/church-logo-grey.png
 template: index
 ---

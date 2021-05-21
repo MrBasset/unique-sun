@@ -1,5 +1,5 @@
 ---
 title: Home
-hero: /demo.png
+hero: /images/demo.png
 template: index
 ---

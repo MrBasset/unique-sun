@@ -3,10 +3,8 @@ ssgName: gatsby
 nodeVersion: '12'
 publishDir: public
 pagesDir: src/pages
-assets:
-  referenceType: static
-  staticDir: static
-  publicPath: /images
+staticDir: static
+uploadDir: images
 models:
   page:
     type: page

@@ -6,7 +6,7 @@ pagesDir: src/pages
 assets:
   referenceType: static
   staticDir: static
-  publicPath: /
+  publicPath: /images
 models:
   page:
     type: page

@@ -1,5 +1,5 @@
 ---
 title: Home
-hero: /images/gatsby-astronaut.png
+hero: /demo.png
 template: index
 ---

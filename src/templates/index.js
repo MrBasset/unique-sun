@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
 
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Image from 'gatsby-image';
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -13,11 +13,10 @@ export const query = graphql`
       frontmatter {
         title
         hero {
-          childImageSharp {
-            gatsbyImageData(
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
+          childCloudinaryAsset {
+            fixed {
+              ...CloudinaryAssetFixed
+            }
           }
         }
       }
@@ -30,7 +29,7 @@ const IndexPage = ({data}) => (
     <h1>{data.markdownRemark.frontmatter.title}</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
-    <GatsbyImage image={getImage(data.markdownRemark.frontmatter.hero)}
+    <Image fixed={data.markdownRemark.frontmatter.hero.childCloudinaryAsset.fixed}
       alt="A Gatsby astronaut"
       style={{ marginBottom: `1.45rem` }}
     />
